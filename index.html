@@ -7,15 +7,18 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title>Lucas Santana | BioLink Pro</title>
 </head>
 <body>
-    <main class="container">
+    <main class="card">
         <header class="profile-header">
-            <img src="Perfil.jpg" alt="Foto de Lucas Santana" class="profile-picture">
+            <div class="profile-wrapper">
+                <img src="images.img/Profile.jpg" alt="Foto de Lucas Santana" class="profile-picture">
+                <span class="status-indicator" title="Disponível"></span>
+            </div>
             <h1>Lucas Santana</h1>
             <p class="subtitle">Estudante de TI | Python & Dados</p>
         </header>
@@ -26,12 +29,35 @@
 
         <nav class="links">
             <ul>
-                <li><a href="https://linkedin.com/in/lucas-santana-dev-e-data" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="https://github.com/lucasslvsantana" target="_blank" rel="noopener">GitHub</a></li>
-                <li><a href="mailto:lucasslvsantana@outlook.com">Email</a></li>
-                <li><a href="SUA_URL_DO_GITHUB_PAGES" class="featured">Meu Portfólio Interativo</a></li>
+                <li><a href="https://linkedin.com/in/lucas-santana-dev-e-data" target="_blank" rel="noopener" class="link-card">
+                    <img src="images.img/linkedin-brands-solid.png" alt="" class="icon">
+                    LinkedIn
+                </a></li>
+                <li><a href="https://github.com/lucasslvsantana" target="_blank" rel="noopener" class="link-card">
+                    <img src="images.img/github-brands-solid.png" alt="" class="icon">
+                    GitHub
+                </a></li>
+                <li><a href="mailto:lucasslvsantana@outlook.com" class="link-card">
+                    <img src="images.img/at-solid.png" alt="" class="icon">
+                    Email
+                </a></li>
+                <li><a href="SUA_URL_DO_GITHUB_PAGES" class="link-card featured">Meu Portfólio Interativo</a></li>
             </ul>
         </nav>
+
+        <footer>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/lucas-santana-dev-e-data" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+                    <img src="images.img/linkedin-brands-solid.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/lucasslvsantana" target="_blank" rel="noopener" class="social-link" title="GitHub">
+                    <img src="images.img/github-brands-solid.png" alt="GitHub">
+                </a>
+                <a href="mailto:lucasslvsantana@outlook.com" class="social-link" title="Email">
+                    <img src="images.img/at-solid.png" alt="Email">
+                </a>
+            </div>
+        </footer>
     </main>
 </body>
 </html>

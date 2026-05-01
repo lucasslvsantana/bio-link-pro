@@ -1,0 +1,223 @@
+/* BioLink Pro - Cartão de Visita Digital */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #006989;
+    --secondary: #01A7C2;
+    --accent: #A3BAC3;
+    --bg-card: #ffffff;
+    --bg-page: #f5f7fa;
+    --text-main: #1d1d1f;
+    --text-muted: #6b7280;
+    --shadow-card: 0 4px 24px rgba(0, 105, 137, 0.12);
+    --shadow-hover: 0 8px 32px rgba(0, 105, 137, 0.2);
+    --radius-card: 24px;
+    --radius-btn: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 520px;
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 3rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--bg-card);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background: #22c55e;
+    border: 4px solid var(--bg-card);
+    border-radius: 50%;
+}
+
+.profile-header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.bio {
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.bio p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    background: var(--bg-card);
+    color: var(--text-main);
+    padding: 1.25rem 2rem;
+    border-radius: var(--radius-btn);
+    border: 2px solid #e5e7eb;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.link-card:hover {
+    border-color: var(--primary);
+    background: #f0f9fc;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.link-card .icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.link-card.featured {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+}
+
+.link-card.featured:hover {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    box-shadow: 0 8px 24px rgba(0, 105, 137, 0.35);
+}
+
+footer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.social-link img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 2.5rem 2rem;
+    }
+    
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .profile-header h1 {
+        font-size: 2rem;
+    }
+    
+    .link-card {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+}
